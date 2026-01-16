@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { hiragana, katakana, vocabulary } from '../data/japaneseData'
 import './Quiz.css'
 
@@ -26,7 +26,7 @@ const romajiToKorean: Record<string, string> = {
 }
 
 function Quiz() {
-  const [quizType, setQuizType] = useState<QuizType>('hiragana')
+  const [_quizType, setQuizType] = useState<QuizType>('hiragana')
   const [questions, setQuestions] = useState<QuizQuestion[]>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)

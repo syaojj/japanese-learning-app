@@ -99,7 +99,6 @@ function Vocabulary() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isFlipped, setIsFlipped] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState<string>('전체')
-  const [studyMode, setStudyMode] = useState(false)
   const [shuffledVocab, setShuffledVocab] = useState<VocabType[]>([])
 
   const categories = ['전체', ...Array.from(new Set(vocabulary.map(v => v.category)))]
